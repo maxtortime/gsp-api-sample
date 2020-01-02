@@ -63,8 +63,8 @@
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1SFn7JzGWm6mfBXX6A2YXPAsv8JJHI7SAwLYdHUrFD3o',
-          range: 'ENG!A1:I',
+          spreadsheetId: '1Z86nMIb3mTlEhepnSitnc6Mj7eYiqTlTB4UWVeDZEbc',
+          range: '영문 제품 모음!A1:I',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
