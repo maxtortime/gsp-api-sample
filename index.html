@@ -29,6 +29,7 @@
     // included, separated by spaces.
     const SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
+    // index for elasticlunr
     const index = elasticlunr(function () {
       this.addField('Brand');
       this.addField('Name');
@@ -93,11 +94,9 @@
         var range = response.result;
         if (range.values.length > 0) {
           const colNames = range.values[0];
-          // appendPre(colNames);
+          
           for (i = 1; i < range.values.length; i++) {
             var row = range.values[i];
-            // Print columns A and E, which correspond to indices 0 and 4.
-            // appendPre(row.join());
             let doc = {};
             row.forEach((elem, index) => {
               doc[colNames[index]] = elem;
