@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project P</title>
+    <title>Muse.F</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--
@@ -30,12 +30,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            alt="Muse.F"
-            width="112"
-            height="28"
-          />
+          <img src="./images/logo.svg" alt="Muse.F" />
         </a>
       </div>
       <div class="navbar-end">
@@ -54,11 +49,32 @@
         placeholder="어떤 향수를 찾으시나요?"
       />
     </section>
-    <section
-      class="section"
-      id="content"
-      style="white-space: pre-wrap;"
-    ></section>
+    <section class="section">
+      <h1 class="title"><span>추천 향수</span></h1>
+      <div class="container rec-container">
+        <div class="rec-box">
+          <img
+            class="rec-perfume"
+            src="./images/fico-di-amalfi.png"
+          />
+          <p><span class='brand'>아쿠아 디 파르마</span><br /><span class='name'>피코 디 아말피</span></p>
+        </div>
+        <div class="rec-box">
+          <img
+            class="rec-perfume"
+            src="./images/fico-di-amalfi.png"
+          />
+          <p><span class='brand'>아쿠아 디 파르마</span><br /><span class='name'>피코 디 아말피</span></p>
+        </div>
+        <div class="rec-box">
+          <img
+            class="rec-perfume"
+            src="./images/fico-di-amalfi.png"
+          />
+          <p><span class='brand'>아쿠아 디 파르마</span><br /><span class='name'>피코 디 아말피</span></p>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="content has-text-centered">
@@ -122,9 +138,10 @@
           );
 
         document.getElementById("search").addEventListener("input", e => {
-          document.getElementById("content").innerHTML = "";
+          // document.getElementById("content").innerHTML = "";
           index.search(e.target.value).forEach(elem => {
-            appendPre(elem.doc["Name"]);
+            console.log(elem.doc['Name']);
+            // appendPre(elem.doc["Name"]);
           }, {});
         });
       }

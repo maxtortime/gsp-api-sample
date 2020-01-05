@@ -6,6 +6,10 @@
   margin-left: 120px;
 }
 
+.navbar-item img {
+  max-height: none;
+}
+
 .active {
   border-bottom: 2px solid #333333;
 }
@@ -15,7 +19,7 @@ a.navbar-item:last-child {
 }
 
 .search-box {
-  background-color: lightblue;
+  background-image: url("./images/search-bar-bg.svg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,4 +50,45 @@ a.navbar-item:last-child {
 .footer {
   background: #333333;
   color: white;
+}
+
+h1.title {
+  text-align: center;
+}
+
+h1.title > span {
+  padding-bottom: 12px;
+  border-bottom: solid 1px black;
+}
+
+img.rec-perfume {
+  height: 200px;
+}
+
+.rec-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rec-box {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.rec-box > p {
+  margin-top: 32px;
+  text-align: center;
+  color: black;
+}
+
+.brand {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.name {
+  font-size: 20px;
+  line-height: 29px;
 }
